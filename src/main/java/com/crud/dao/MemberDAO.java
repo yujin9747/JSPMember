@@ -54,7 +54,8 @@ public class MemberDAO {
 			stmt.setString(4, vo.getDetail());
 			stmt.setInt(5, vo.getSid());
 
-			System.out.println(vo.getUsername() + "-" + vo.getEmail() + "-" + vo.getPhoto() + "-" + vo.getDetail() + "-" + vo.getSid());
+			System.out.println(vo.getUsername() + "-" + vo.getEmail() + "-" 
+			+ vo.getPhoto() + "-" + vo.getDetail() + "-" + vo.getSid());
 			stmt.executeUpdate();
 			return 1;
 		} catch (Exception e) {
@@ -94,9 +95,8 @@ public class MemberDAO {
 			stmt = conn.prepareStatement(M_LIST) ;
 			rs = stmt.executeQuery() ;
 			list = new ArrayList<MemberVO>() ;
-			MemberVO one = new MemberVO() ;
-			if(rs.next()) {
-				one = new MemberVO() ;
+			while(rs.next()) {
+				MemberVO one = new MemberVO() ;
 				one.setSid(rs.getInt("sid"));
 				one.setUserid(rs.getString("userid"));
 				one.setUsername(rs.getString("username"));

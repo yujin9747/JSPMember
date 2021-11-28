@@ -14,7 +14,6 @@
 				<configuration>
 					<warSourceDirectory>webapp</warSourceDirectory>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
-					
 				</configuration>
 			</plugin>
 		</plugins>
@@ -45,6 +44,5 @@
     <artifactId>cos</artifactId>
     <version>05Nov2002</version>
 </dependency>
-
 	</dependencies>
 </project>

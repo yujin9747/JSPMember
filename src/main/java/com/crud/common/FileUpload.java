@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import com.crud.bean.MemberVO;
 import com.crud.dao.MemberDAO;
-
+import com.oreilly.servlet.multipart.FileRenamePolicy ;
 public class FileUpload {
 
 	public MemberVO uploadPhoto(HttpServletRequest request) {

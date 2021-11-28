@@ -12,7 +12,7 @@
 
 <%
 	MemberDAO memberDAO = new MemberDAO();
-	String id=request.getParameter("sid");	
+	String id=request.getParameter("id");	
 	MemberVO u=memberDAO.getOne(Integer.parseInt(id));
 	request.setAttribute("vo", u) ;
 %>
@@ -25,7 +25,7 @@
 <tr><td>User Name:</td><td>${vo.getUsername()}</td></tr>
 <tr><td>Email :</td><td>${vo.getEmail()}</td></tr>
 <tr><td>Photo :</td><td><c:if test = "${vo.getPhoto() ne '' }"><br />
-				<img src ="${pageContext.request.contextPath }/upload.${vo.getPhoto()}" class = "photo"></c:if></td></tr>
+				<img src ="${pageContext.request.contextPath }/upload/${vo.getPhoto()}" class = "photo"></c:if></td></tr>
 <tr><td>Detail :</td><td>${ vo.getDetail()}</td></tr>
 <tr><td><a href="list.jsp">Back to List</a></td></tr>
 </table>

@@ -17,7 +17,8 @@
 	File dir = new File(realPath) ;
 	if(!dir.exists()) dir.mkdirs() ;
 	
-	MultipartRequest multipartRequest = new  MultipartRequest(request, realPath, sizeLimit, "utf-8", new DefaultFileRenamePolicy()) ;
+	MultipartRequest multipartRequest = new  MultipartRequest(request, realPath, sizeLimit, "utf-8", 
+										new DefaultFileRenamePolicy()) ;
 	
 	filename = multipartRequest.getFilesystemName("photo") ;
 %>

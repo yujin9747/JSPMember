@@ -54,9 +54,9 @@
 	<th>Edit</th>
 	<th>Delete</th>
 </tr>
-<c:forEach items="${list}" var="u" varStatus="status">
+<c:forEach items="${list}" var="u">
 	<tr>
-		<td>${fn:length(list)-status.index}</td>
+		<td>${u.getSid()}</td>
 		<td>${u.getUserid()}</td>
 		<td>${u.getUsername()}</td>
 		<td>${u.getEmail()}</td>

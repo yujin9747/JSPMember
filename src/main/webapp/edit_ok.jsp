@@ -9,5 +9,12 @@
 	FileUpload upload = new FileUpload() ;
 	MemberVO u = upload.uploadPhoto(request) ;
 	int i=memberDAO.updateMember(u);
-	response.sendRedirect("list.jsp");
+	String msg = "데이터 수정 성공 !";
+	if(i == 0) msg = "[에러] 데이터 수정 ";
 %>
+
+<script>
+	alert('<%=msg%>');
+	location.href='list.jsp';
+</script>
+

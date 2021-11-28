@@ -2,3 +2,5 @@
 	<input type='file' name = 'photo'>
 	<input type='submit' value='upload'>
 </form>
+
+
